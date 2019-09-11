@@ -23,3 +23,4 @@
 Методы класса:
 1) void Postroenie(int, int, int, int);
 2) void Peremeshenie();
+3) void Size();
