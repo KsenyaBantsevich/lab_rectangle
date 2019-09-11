@@ -25,3 +25,4 @@
 2) void Peremeshenie();
 3) void Size();
 4) void Size_na_1();
+5) void Size_na_minus_1();
