@@ -15,6 +15,7 @@ public:
 	void Postroenie(int, int, int, int);
 	void Peremeshenie();
 	void Size();
+	void Size_na_1();
 };
 
 void Rectangle::Postroenie(int x1, int x2, int y1, int y2) {
@@ -80,4 +81,15 @@ void Rectangle::Size() {
 	cout << " C:" << "(" << x2 << "," << y2 << ")" << endl;
 	cout << " D:" << "(" << x1 << "," << y2 << ")" << endl;
 	Postroenie(x1, x2, y1, y2);
+}
+
+void Rectangle::Size_na_1()
+{
+	x2++; y2++;
+	cout << "Увеличиваем длину и ширину на 1" << endl;
+	cout << "Получились следующие координаты прямоугольника:" << endl;
+	cout << " A:" << "(" << x1 << "," << y1 << ")" << endl;
+	cout << " B:" << "(" << x2 << "," << y1 << ")" << endl;
+	cout << " C:" << "(" << x2 << "," << y2 << ")" << endl;
+	cout << " D:" << "(" << x1 << "," << y2 << ")" << endl;
 }
