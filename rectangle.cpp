@@ -6,7 +6,7 @@ using namespace std;
 class Rectangle
 {
 private:
-	int x1, x2, y1, y2, dx, dy, r;
+	int x1, x2, y1, y2, dx, dy, k, k1;
 public:
 	Rectangle(int a, int b, int c, int d) : x1(a), x2(b), y1(c), y2(d) {	}
 	Rectangle() : x1(2), x2(5), y1(2), y2(6) {	}
@@ -14,6 +14,7 @@ public:
 
 	void Postroenie(int, int, int, int);
 	void Peremeshenie();
+	void Size();
 };
 
 void Rectangle::Postroenie(int x1, int x2, int y1, int y2) {
@@ -64,4 +65,19 @@ void Rectangle::Peremeshenie() {
 	cout << " B:" << "(" << x2 << "," << y1 << ")" << endl;
 	cout << " C:" << "(" << x2 << "," << y2 << ")" << endl;
 	cout << " D:" << "(" << x1 << "," << y2 << ")" << endl;
+}
+
+void Rectangle::Size() {
+	cout << " Во сколько раз изменяем длину стороны прямоугольника по оси Х?" << endl;
+	cin >> k;
+	cout << "\n Во сколько раз изменяем длину стороны прямоугольника по оси Y?" << endl;
+	cin >> k1;
+	x2 *= k;
+	y2 *= k1;
+	cout << "Получились следующие координаты прямоугольника:" << endl;
+	cout << " A:" << "(" << x1 << "," << y1 << ")" << endl;
+	cout << " B:" << "(" << x2 << "," << y1 << ")" << endl;
+	cout << " C:" << "(" << x2 << "," << y2 << ")" << endl;
+	cout << " D:" << "(" << x1 << "," << y2 << ")" << endl;
+	Postroenie(x1, x2, y1, y2);
 }
