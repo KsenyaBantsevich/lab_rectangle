@@ -13,6 +13,7 @@ public:
 	~Rectangle() { }
 
 	void Postroenie(int, int, int, int);
+	void Peremeshenie();
 };
 
 void Rectangle::Postroenie(int x1, int x2, int y1, int y2) {
@@ -47,4 +48,20 @@ void Rectangle::Postroenie(int x1, int x2, int y1, int y2) {
 		}
 	}
 	cout << "\n";
+}
+
+void Rectangle::Peremeshenie() {
+	cout << " На сколько единиц вы хотите переместить прямоугольник по оси X ?" << endl;
+	cin >> dx;
+	cout << " На сколько единиц вы хотите переместить прямоугольник по оси Y ?" << endl;
+	cin >> dy;
+	x1 += dx;
+	x2 += dx;
+	y1 += dy;
+	y2 += dy;
+	cout << "Получились следующие координаты прямоугольника:" << endl;
+	cout << " A:" << "(" << x1 << "," << y1 << ")" << endl;
+	cout << " B:" << "(" << x2 << "," << y1 << ")" << endl;
+	cout << " C:" << "(" << x2 << "," << y2 << ")" << endl;
+	cout << " D:" << "(" << x1 << "," << y2 << ")" << endl;
 }
