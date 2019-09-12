@@ -1,4 +1,4 @@
-﻿#include "pch.h"
+#include "pch.h"
 #include <iostream>
 
 using namespace std;
@@ -13,6 +13,7 @@ public:
 	~Rectangle() { }
 
 	void Postroenie(int, int, int, int);
+	void Result();
 };
 
 void Rectangle::Postroenie(int x1, int x2, int y1, int y2) {
@@ -47,4 +48,14 @@ void Rectangle::Postroenie(int x1, int x2, int y1, int y2) {
 		}
 	}
 	cout << "\n";
+}
+
+
+void Rectangle::Result() {
+	cout << "Вы ввели следующие координаты прямоугольника:" << endl;
+	cout << " A:" << "(" << x1 << "," << y1 << ")" << endl;
+	cout << " B:" << "(" << x2 << "," << y1 << ")" << endl;
+	cout << " C:" << "(" << x2 << "," << y2 << ")" << endl;
+	cout << " D:" << "(" << x1 << "," << y2 << ")" << endl;
+	Postroenie(x1, x2, y1, y2);
 }
